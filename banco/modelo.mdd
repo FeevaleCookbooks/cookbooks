@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<DBMODEL Version="2" TYPE="MySQL">
+<MODELSETTINGS MDDVERSION="2.1.2 (build 998)" ModelProject="" ModelName="modelo" ModelCompany="" ModelAuthor="" ModelVersion="" ModelVersionAI="0" ModelCreated="2014-08-29 20:41:20" MaintainModelUpdated="1" ModelCopyright="\00A9" ModelUpdated="2014-08-29 21:41:43" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="50" PrintLink="" WorkspaceColor="16777215" SnapGrid="1" DisplaySnap="1" SnapSize="10" ShowPages="1" ShowTableColumns="1" ShowTableIndeces="1" ShowColumnTypes="1" ShowDomains="0" ShowIndexInd="0" ShowNullInd="0" ShowForeignKeys="1" EntityFillColor="16777215" EntityLineColor="8388608" EntityFontColor="0" ShowTableColumnComment="0" ShowTableTriggers="1" ShowTableComment="0" ShowMaxEnumItems="3" ShowRefName="1" ShowCardinality="0" ShowJoin="0" Notation="0" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" DefaultDelete="3" DefaultUpdate="3" DefaultTableType="0" DefaultDataType="3" CreateFKRef="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="`" EncloseNames="1" HPageCount="5" VPageCount="5" SPFillColor="13499135" SPLineColor="8388608" SPFontColor="0" ViewFillColor="3329434" ViewLineColor="8388608" ViewFontColor="0" TrimSPBody="0" MinimapBackColor="16777215" MinimapShapesStyle="2" MinimapVisibleAreaStyle="2" />
+<GENERATIONSETTINGS TextCharCase="2" NameInComment="0" ModelCheck="1" ISQL="0" Delimiter="||" TypeInsteadOfEngine="0">
+  <DBGENSETTINGS DBCreate="0" BeginScript="0" Comment="0" Drop="0" EndScript="0" />
+  <FKGENSETTINGS CreateFK="1" GenerateInsideTables="1" />
+  <SPGENSETTINGS BeginScript="0" Comment="0" Drop="1" EndScript="1" SPCreate="1" OrderStr="" />
+  <TABLEGENSETTINGS Annotation="0" BeginScript="0" Comment="1" CreateIndex="1" CreateOption="1" CreatePK="1" Drop="1" EndScript="0" TableCreate="1" TriggersCreate="1" TriggersDrop="0" PartitionsCreate="1" ColumnCharset="1" OrderStr="" />
+  <VIEWGENSETTINGS BeginScript="0" Comment="0" Drop="1" EndScript="0" ViewCreate="1" />
+  <EVENTGENSETTINGS BeginScript="0" Comment="0" Drop="1" EndScript="0" EventCreate="1" OrderStr="" />
+</GENERATIONSETTINGS>
+<DATABASE Name="cookbooks" CharacterSet="latin1" Collate="latin1_swedish_ci" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="0" />
+<DOMAINS>
+</DOMAINS>
+<METADATA>
+<GROUPS>
+</GROUPS>
+<STAMPS>
+</STAMPS>
+<ENTITIES>
+<ENTITY ID="1000" Name="usuario" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="80" YPos="80" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="0" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1002" Name="id_usuario" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1011" Name="nome" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1012" Name="email" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1013" Name="senha" DomainID="-1" Pos="4" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1014" Name="cidade" DomainID="-1" Pos="5" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1015" Name="profissao" DomainID="-1" Pos="6" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1016" Name="foto" DomainID="-1" Pos="7" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1017" Name="observacao" DomainID="-1" Pos="8" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1018" Name="ativo" DomainID="-1" Pos="9" Datatype="0" Type="TINYINT" Width="4" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="1" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1034" />
+<REFERENCE_BEGIN ID="1055" />
+<REFERENCE_BEGIN ID="1074" />
+<REFERENCE_BEGIN ID="1089" />
+<REFERENCE_BEGIN ID="1095" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1004" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1002=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1020" Name="receita" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="710" YPos="90" Type="0" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1021" Name="id_receita" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1036" Name="id_usuario" DomainID="-1" Pos="2" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1022" Name="nome" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1023" Name="ingredientes" DomainID="-1" Pos="4" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1024" Name="modo_preparo" DomainID="-1" Pos="5" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1025" Name="categoria" DomainID="-1" Pos="6" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1026" Name="foto" DomainID="-1" Pos="7" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1027" Name="observacao" DomainID="-1" Pos="8" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1028" Name="ativo" DomainID="-1" Pos="9" Datatype="0" Type="TINYINT" Width="4" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="1" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1058" />
+<REFERENCE_BEGIN ID="1077" />
+<REFERENCE_BEGIN ID="1105" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1034" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1030" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1021=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1047" Name="comentario" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="390" YPos="250" Type="0" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1051" Name="id_comentario" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1057" Name="id_usuario" DomainID="-1" Pos="2" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1060" Name="id_receita" DomainID="-1" Pos="3" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1052" Name="comentario" DomainID="-1" Pos="4" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1053" Name="ativo" DomainID="-1" Pos="5" Datatype="0" Type="TINYINT" Width="4" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="1" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1102" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1055" />
+<REFERENCE_END ID="1058" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1050" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1051=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1067" Name="like" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="390" YPos="150" Type="0" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1071" Name="id_like" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1076" Name="id_usuario" DomainID="-1" Pos="2" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1079" Name="id_receita" DomainID="-1" Pos="3" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1072" Name="ativo" DomainID="-1" Pos="4" Datatype="0" Type="TINYINT" Width="4" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1074" />
+<REFERENCE_END ID="1077" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1070" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1071=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1085" Name="denuncia" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="380" YPos="400" Type="0" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1086" Name="id_denuncia" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1091" Name="id_usuario_criador" DomainID="-1" Pos="2" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1097" Name="id_usuario" DomainID="-1" Pos="3" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1104" Name="id_comentario" DomainID="-1" Pos="4" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1107" Name="id_receita" DomainID="-1" Pos="5" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1119" Name="status" DomainID="-1" Pos="6" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1089" />
+<REFERENCE_END ID="1095" />
+<REFERENCE_END ID="1102" />
+<REFERENCE_END ID="1105" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1088" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1086=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+</ENTITIES>
+<REFERENCES>
+<REFERENCE  ID="1034" Name="Ref_01" Comments="" SOURCE="1000" DESTINATION="1020" FKIDS="1002=1036\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="1036\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1055" Name="Ref_02" Comments="" SOURCE="1000" DESTINATION="1047" FKIDS="1002=1057\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="1057\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1058" Name="Ref_03" Comments="" SOURCE="1020" DESTINATION="1047" FKIDS="1021=1060\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1030" AutoColumnIDs="1060\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1074" Name="Ref_04" Comments="" SOURCE="1000" DESTINATION="1067" FKIDS="1002=1076\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="1076\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1077" Name="Ref_05" Comments="" SOURCE="1020" DESTINATION="1067" FKIDS="1021=1079\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1030" AutoColumnIDs="1079\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1089" Name="Ref_06" Comments="" SOURCE="1000" DESTINATION="1085" FKIDS="1002=1091\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="1091\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1095" Name="Ref_07" Comments="" SOURCE="1000" DESTINATION="1085" FKIDS="1002=1097\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="1097\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1102" Name="Ref_08" Comments="" SOURCE="1047" DESTINATION="1085" FKIDS="1051=1104\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1050" AutoColumnIDs="1104\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1105" Name="Ref_09" Comments="" SOURCE="1020" DESTINATION="1085" FKIDS="1021=1107\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1030" AutoColumnIDs="1107\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+</REFERENCES>
+<NOTES>
+</NOTES>
+<STOREDPROCES>
+</STOREDPROCES>
+<VIEWS>
+</VIEWS>
+<EVENTS>
+</EVENTS>
+</METADATA>
+</DBMODEL>
