@@ -1,0 +1,42 @@
+#uploader_files {
+	font-family:Tahoma;
+}
+
+.topoupload { width:100%;border-bottom:2px solid #FFFFFF; }
+.topoupload td { padding:5px; }
+.headertable { border-bottom:3px solid #FFFFFF;height:12px;padding:4px; width:100%; }
+.headertable div, #files_list div { float:left; }
+.c30p { width:30%; }
+.c70p { width:70px; }
+.c100 { width:100px; }
+.bold { font-weight:700; }
+.ac { text-align:center; }
+.separador { background-color:#DDD; height:1px; line-height:1px; font-size:1px; clear:both; margin:1px; }
+.divisor { border-bottom:2px solid #FFFFFF;border-top:1px solid #CCCCCC;clear:both; }
+
+.uploadimagem { width:120px;margin-left:10px; }
+.uploadarquivo { width:170px; }
+.uploadtamanho{ width:100px; }
+.uploadlegenda { width:250px; }
+
+.linhatable1 { background-color: #F9F9F9; }
+.linhatable2 { background-color: #F0F0F0; }
+.linhainsert1 { background-color: #F3FAF3; }
+.linhainsert2 { background-color: #E9F5E9; }
+
+.linhaupload { border-bottom:3px solid #FFFFFF;padding-top:3px;padding-bottom:3px;width:100%; }
+.processoupload { background-color:#FFFFFF;padding:10px;font-size:30px;color:#666666;width:80px;text-align: center; }
+
+#files_list div a { text-decoration:underline;font-weight:bold; color:#666666; }
+
+.progress div {
+	background-color:#007700;
+	border-top:3px solid #fff;
+	border-bottom:3px solid #fff;
+	height:12px;
+	width:0%;
+	font-size:10px;
+	font-weight:700;
+	color:#fff;
+	text-align:center;
+}

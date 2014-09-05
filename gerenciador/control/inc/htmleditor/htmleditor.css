@@ -1,0 +1,47 @@
+.html_editor table tr td iframe { border: solid 1px #999999; width: 100%; }
+
+.html_editor td.bto_bar { padding: 3px; background: #EEEEEE; }
+
+.html_editor div.bto_ext, .html_editor div.bto_ext_over { background-color: #FFFFFF; border: 1px solid #999999; padding: 3px; margin-right: 2px; width: 16px; height: 16px; }
+.html_editor div.bto_ext a, .html_editor div.bto_ext_over a { display: block; outline:none; background-repeat: no-repeat; background-image: url(btos.gif); width: 16px; height: 16px; }
+.html_editor div.bto_ext a span, .html_editor div.bto_ext_over a span { display: none; }
+.html_editor div.bto_ext_over { border: 1px solid #333333; }
+
+.html_editor div a.bto_italic { background-position: 0px 0px; }
+.html_editor div a.bto_bold { background-position: 0px -16px; }
+.html_editor div a.bto_createlink { background-position: -16px 0px; }
+.html_editor div a.bto_unlink { background-position: -16px -16px; }
+.html_editor div a.bto_justifycenter { background-position: -32px 0px; }
+.html_editor div a.bto_justifyleft { background-position: -32px -16px; }
+.html_editor div a.bto_justifyright { background-position: -48px 0px; }
+.html_editor div a.bto_justifyfull { background-position: -48px -16px; }
+.html_editor div a.bto_image { background-position: -64px 0px; }
+.html_editor div a.bto_underline { background-position: -64px -16px; }
+.html_editor div a.bto_insertorderedlist { background-position: -80px -16px; }
+.html_editor div a.bto_insertunorderedlist { background-position: -80px 0px; }
+.html_editor div a.bto_removeformat { background-position: 0px -32px; }
+.html_editor div a.bto_viewhtml { background-position: -48px -32px; }
+
+.html_editor table tr td a.bto_voltar { border: 1px solid #CCCCCC; padding: 3px;  background: #FFF; display: block; width: 57px; text-decoration: none; color: #666666; text-align: center; }
+
+.html_editor .link_box { z-index: 9999; padding: 4px; position: absolute; margin-top: 1px; background: #EEEEEE; border: solid 1px #CCCCCC; width: 300px; font-family: Tahoma; font-size: 10px; }
+.html_editor .link_box table { font-family: Tahoma; font-size: 10px; }
+.html_editor .link_box div.content { padding: 8px; width: 284px; _width: 300px; height: 40px; _height: 60px; background: #FBFBFB; font-size: 10px; }
+.html_editor .link_box div.bt { margin-top: 5px; width: 100px; height: 20px; _height: 30px; border: 1px solid #8BC78C; background: #D5EBCF; text-align: center; padding-top: 7px; cursor: pointer; color: #009900; }
+.html_editor .link_box div.bt_action { color: #999999; border: 1px solid #E3E3E3; background: #F3F3F3; }
+.html_editor .link_box div.aba_sel { cursor: pointer; padding-top: 2px; _padding-top: 2px; margin: 0px; width: 70px; height: 17px; _height: 19px; background: #FBFBFB; float: left; text-align: center; margin-right: 3px; font-size: 10px; }
+.html_editor .link_box div.aba_fechar { color: #990000; margin-left: 210px; _margin-left: 213px; cursor: pointer; border: 1px solid #E69191; background: #F7D5D5; float: left; padding: 0px; width: 15px; height: 15px; text-align: center; }
+
+.html_editor .image_box { z-index: 9999; padding: 4px; position: absolute; margin-top: 1px; background: #EEEEEE; border: solid 1px #CCCCCC; width: 300px; font-family: Tahoma; font-size: 10px; }
+.html_editor .image_box table { font-family: Tahoma; font-size: 10px; }
+.html_editor .image_box div.aba, .html_editor .image_box div.aba_over, .html_editor .image_box div.aba_sel { cursor: pointer; padding-top: 2px; _padding-top: 2px; margin: 0px; width: 70px; height: 17px; _height: 19px; background: #F3F3F3; float: left; text-align: center; margin-right: 3px; font-size: 10px; }
+.html_editor .image_box div.aba_over { background: #F7F7F7; }
+.html_editor .image_box div.aba_sel { background: #FBFBFB; }
+.html_editor .image_box div.content { padding: 8px; width: 284px; _width: 300px; height: 200px; background: #FBFBFB; font-size: 10px; }
+.html_editor .image_box div.thumb { vertical-align: middle; text-align: center; background: #EEEEEE; width: 120px; height: 120px; margin: 5 20 15 0px; padding: 2px; }
+.html_editor .image_box div.aba_fechar { color: #990000; margin-left: 64px; _margin-left: 66px; cursor: pointer; border: 1px solid #E69191; background: #F7D5D5; float: left; padding: 0px; width: 15px; height: 15px; text-align: center; }
+.html_editor .image_box div.bt { margin-top: 5px; width: 100px; height: 20px; _height: 30px; border: 1px solid #8BC78C; background: #D5EBCF; text-align: center; padding-top: 7px; cursor: pointer; color: #009900; }
+.html_editor .image_box div.bt_action { color: #999999; border: 1px solid #E3E3E3; background: #F3F3F3; }
+.html_editor .image_box div.thumb_list { cursor: pointer; float: left; width: 70px; height: 70px; _width: 76px; _height: 76px; margin: 2px; background: #EEEEEE; padding: 3px; }
+
+.html_editor .alert { width: 274px; _width: 284px; border: 1px solid #FFCC00; background: #FFFFCC; padding: 4px; margin: 10 0 10 0px; }

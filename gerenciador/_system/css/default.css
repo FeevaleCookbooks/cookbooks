@@ -1,0 +1,48 @@
+/* clear elements */
+html,body{
+  margin:0px;
+  padding:0px;
+  
+  border:none;
+}
+
+a img { 
+	border: 0px;
+	margin: 0px;
+}
+
+form { 
+	margin: 0px; 
+	padding: 0px;
+}
+
+
+/* replace */
+.replace {
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color:transparent;
+	text-indent:-50000px;
+	overflow:hidden;
+}
+.replace * {
+	text-indent: -10000px;
+	display:block;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color:transparent;
+}
+.replace a {
+	text-indent:0;
+}
+.replace a span {
+	text-indent:-10000px;
+}
+
+.replace-bt{
+	text-indent:-999px;
+	line-height:999999px;
+	cursor:pointer;
+	border:none;
+}
+/* end replace */

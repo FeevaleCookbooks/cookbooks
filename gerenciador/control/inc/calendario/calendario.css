@@ -1,0 +1,94 @@
+.calendario {
+	border: 1px #999999 solid;
+}
+
+.calendario table {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #666666;
+	width: 140px;
+}
+
+.calendario table tr td.mes {
+	border-bottom: 1px #CCCCCC solid;
+	width: 120px;
+	height: 18px;
+	text-align: center;
+	background:#5E94B0;
+	color: #FFFFFF;
+	cursor: move;
+}
+
+.calendario table tr td.fechar {
+	cursor: pointer;
+	width: 15px;
+	height: 18px;
+	vertical-align: middle;
+	text-align: center;
+	background:#5E94B0;
+	color: #FFFFFF;
+	border-left: 1px solid #CCCCCC;
+}
+
+
+.calendario table tr td.nav {
+	border-bottom: 1px solid #CCCCCC;
+	width: 15px;
+	height: 18px;
+	text-align: center;
+	cursor: pointer;
+	background: #E4EAF0;
+}
+
+.calendario table tr td.data {
+	border-bottom: 1px solid #CCCCCC;
+	width: 80px;
+	height: 14px;
+	text-align: center;
+	background: #C7CED1;
+}
+
+.calendario table tr td.dias {
+	width: 140px;
+}
+
+.calendario table tr td.status {
+	width: 140px;
+	text-align: center;
+	background: #E4EAF0;
+}
+
+.calendario table tr td.dias table tr td {
+	width: 20px;
+	height: 15px;
+	cursor: pointer;
+	background: #F2F2F2;
+	margin: 0px;
+	border-bottom: solid #DFDFDF 1px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #666666;
+}
+
+.calendario table tr td.dias_t table tr td {
+	width: 20px;
+	height: 15px;
+	cursor: pointer;
+	background: #F2F2F2;
+	margin: 0px;
+	border-bottom: solid #CCCCCC 1px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #666666;
+	font-weight: bold;
+}
+
+.calendario table tr td.dias table tr td.data {
+	color: #333333;
+	font-weight: bold;
+	border-bottom: solid #CCCCCC 1px;
+}

@@ -1,0 +1,1 @@
+<div align="center"><a href="javascript: Popup_atual.close();"><img src="../../<?php echo($_GET['url']); ?>" align="center"></a></div>
