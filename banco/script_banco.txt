@@ -70,15 +70,6 @@ CREATE TABLE `denuncia` (
 )
 ENGINE=INNODB;
 
-CREATE TABLE `seguidor` (
-  `id_seguidor` int(11) NOT NULL AUTO_INCREMENT,
-  `id_usuario_seguidor` int(11) NOT NULL DEFAULT '0',
-  `id_usuario_seguido` int(11) NOT NULL DEFAULT '0',
-  `ativo` tinyint(4) DEFAULT '1',
-  PRIMARY KEY(`id_seguidor`)
-)
-ENGINE=INNODB;
-
 
 
 -- ----------------------------- --
@@ -99,22 +90,10 @@ ALTER TABLE `comentario` ADD
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 
-ALTER TABLE `comentario` ADD
-  CONSTRAINT `Ref_03` FOREIGN KEY (`id_receita`)
-    REFERENCES `receita`(`id_receita`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
 
 ALTER TABLE `like` ADD
   CONSTRAINT `Ref_04` FOREIGN KEY (`id_usuario`)
     REFERENCES `usuario`(`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
-ALTER TABLE `like` ADD
-  CONSTRAINT `Ref_05` FOREIGN KEY (`id_receita`)
-    REFERENCES `receita`(`id_receita`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 
@@ -127,31 +106,6 @@ ALTER TABLE `denuncia` ADD
 
 ALTER TABLE `denuncia` ADD
   CONSTRAINT `Ref_07` FOREIGN KEY (`id_usuario`)
-    REFERENCES `usuario`(`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
-ALTER TABLE `denuncia` ADD
-  CONSTRAINT `Ref_08` FOREIGN KEY (`id_comentario`)
-    REFERENCES `comentario`(`id_comentario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
-ALTER TABLE `denuncia` ADD
-  CONSTRAINT `Ref_09` FOREIGN KEY (`id_receita`)
-    REFERENCES `receita`(`id_receita`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
-
-ALTER TABLE `seguidor` ADD
-  CONSTRAINT `Ref_10` FOREIGN KEY (`id_usuario_seguidor`)
-    REFERENCES `usuario`(`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION;
-
-ALTER TABLE `seguidor` ADD
-  CONSTRAINT `Ref_11` FOREIGN KEY (`id_usuario_seguido`)
     REFERENCES `usuario`(`id_usuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
