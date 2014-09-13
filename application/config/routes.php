@@ -38,7 +38,8 @@
 |
 */
 
-$route['default_controller'] = "login"; // definição da rota de primeiro acesso
+$route['default_controller'] = "home"; // definição da rota de primeiro acesso
+
 $route['404_override'] = '';
 
 

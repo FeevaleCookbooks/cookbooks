@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/indicador/'; //A partir daqui o CODEIGNITER irá formar os links e etc
+$config['base_url']	= ''; //A partir daqui o CODEIGNITER irá formar os links e etc
 
 /*
 |--------------------------------------------------------------------------
