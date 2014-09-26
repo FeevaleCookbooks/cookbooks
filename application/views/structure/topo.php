@@ -6,5 +6,4 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"><img src="<?php echo site_url('assets/css/img/logo.png')?>" width="70" style="margin-top: -5px;"></a>
-  </div>
+</div>
