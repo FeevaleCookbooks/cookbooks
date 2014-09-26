@@ -45,10 +45,8 @@ class Login extends CI_Controller {
             
             redirect('/perfil/', 'refresh');                
         }else{
-
             $this->load->view('structure/head');
             $this->load->view('structure/header');
-            $this->load->view('structure/topo');
             $this->load->view('login/index');
             $this->load->view('structure/footer');
 
