@@ -16,13 +16,12 @@ class Login extends CI_Controller {
 		$this->load->view('structure/head');
         $this->load->view('structure/header');
         $this->load->view('structure/topo');
-        $this->load->view('login_view');
+        $this->load->view('login/index');
         $this->load->view('structure/footer');
 
 	}
 
     public function checkLogin(){
-
         $this->load->library('session');
 
         $user = $_POST['email'];
@@ -45,14 +44,12 @@ class Login extends CI_Controller {
 
             
             redirect('/perfil/', 'refresh');                
-            
-
         }else{
 
             $this->load->view('structure/head');
             $this->load->view('structure/header');
             $this->load->view('structure/topo');
-            $this->load->view('login_view');
+            $this->load->view('login/index');
             $this->load->view('structure/footer');
 
             print "<script type=\"text/javascript\">alert('Login ou Senha não conferem');</script>";

@@ -6,8 +6,7 @@ class login_model extends CI_Model {
 
         $this->db->where('email', $user);
         $this->db->where('senha', $pass);
-        $this->db->where('ativo', 1);
-        $sql = $this->db->get('usuario');
+        $sql = $this->db->get('tbl_user');
 
         return $sql->result_array();
 
