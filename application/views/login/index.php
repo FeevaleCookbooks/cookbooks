@@ -16,21 +16,21 @@ $this->load->view("includes/top.php");
 						<i class="fa fa-user"></i>Login Form
 					</div>
 
-					<form class="form-item" action="#" id="primaryPostForm" method="POST" enctype="multipart/form-data">
+					<form class="form-item" action="<?php echo site_url('login/checkLogin');?>" id="primaryPostForm" method="POST" enctype="multipart/form-data">
 
 						
 						
 								<fieldset class="input-full-width">
 
-									<label for="edit-title" class="control-label"><i class="fa fa-user"></i>Username:</label>
-									<input type="text" name="username" class="text" value="" maxlength="30" class="form-text required" />
+									<label for="edit-title" class="control-label"><i class="fa fa-user"></i>E-mail:</label>
+									<input type="text" id="exampleInputEmail1" name="email" class="text" value="" maxlength="30" class="form-text required" />
 
 								</fieldset>
 
 								<fieldset class="input-full-width">
 
 									<label for="edit-title" class="control-label"><i class="fa fa-key"></i>Password:</label>
-									<input type="password" name="password" class="text" maxlength="15" />
+									<input type="password" id="exampleInputPassword1" name="pass" class="text" maxlength="15" />
 
 								</fieldset>
 

@@ -1,33 +1,3 @@
-<section id="top">
-
-	<div class="container">
-
-		<a class="logo" href="http://alexgurghis.com/themes/wpcook">
-			<img src="wp-content/uploads/2014/05/logo.png" alt="Logo" />
-		</a>
-
-		<div class="top-social-icons">
-				<a class="target-blank" href="https://www.facebook.com/alex.gurghis"><i class="fa fa-facebook-square"></i></a>
-				<a class="target-blank" href="https://twitter.com/agurghis"><i class="fa fa-twitter-square"></i></a>
-				<a class="target-blank" href="http://dribbble.com/alexgurghis"><i class="fa fa-dribbble"></i></a>
-				<a class="target-blank" href="http://vimeo.com/alexgurghis"><i class="fa fa-vimeo-square"></i></a>
-		</div>
-
-		<div class="top_menu">
-			<ul class="menu" style="padding-left: 20px;">
-				<li class="first">
-					<a href="login/index.html" class="ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Login">Login</a>
-				</li>
-				<li class="last">
-					<a href="register-an-account/index.html" class="ctools-use-modal ctools-modal-ctools-ajax-register-style" title="Register">Register</a>
-				</li>
-			</ul>
-		</div>
-
-	</div>
-
-</section>
-
 <header id="header">
 
 	<div class="container">
