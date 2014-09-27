@@ -4958,7 +4958,8 @@ fieldset.input-full-width label.header-label {
 	margin-top: 6px;
 }
 
-fieldset.input-full-width input {
+fieldset.input-full-width input, 
+fieldset.input-full-width select {
 	width: 70%;
 	width: -webkit-calc(100% - 100px);
 	width: calc(100% - 100px); 

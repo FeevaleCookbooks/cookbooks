@@ -3,13 +3,18 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-function debug($var){
-    echo '<pre>';
-    print_r($var);
-    echo '</pre>';
-}
-
 class receita extends CI_Controller {
+
+
+    public function __construct() {
+          parent::__construct();
+
+
+        $this->session->set_userdata("id",'5');
+
+        $this->load->model('receita_model');
+
+     }
 
 
     public function index() {
@@ -17,17 +22,8 @@ class receita extends CI_Controller {
         if($this->session->userdata('id') != null){
 
             $idLogado = $this->session->userdata('id');
-
-            $this->load->model('receita_model');
             $data['receita'] = $this->receita_model->getAllRecipes();
             
-            //$this->load->view('structure/head');
-            //$this->load->view('structure/header');
-            //$this->load->view('structure/topo');
-            //$this->load->view('structure/menuLeftAdmin', $data);
-            //$this->load->view('finalidade_view');
-            //$this->load->view('structure/footer');
-
         }else{
 
             redirect('/login/', 'refresh');
@@ -36,13 +32,22 @@ class receita extends CI_Controller {
 
     }
 
+    public function add(){
+
+        $data['row_recipe'] = $this->receita_model->getAllRecipes();
+        
+        $this->load->view("recipe/add.php", $data);
+
+    }
+
     public function inserir_receita(){
 
         if($this->session->userdata('id') != null){
+
+            $_POST["foto"] = "endereco_foto";
             
             $idLogado = $this->session->userdata('id');
 
-            $this->load->model('receita_model');
             $arr_dados = array('id_usuario' => $this->session->userdata('id'), 
                                'nome' => $_POST['nome_receita'],
                                'ingredientes' => $_POST['ingredientes'],
@@ -50,14 +55,11 @@ class receita extends CI_Controller {
                                'categoria' => $_POST['categoria'],
                                'foto' => $_POST['foto'], 
                                'observacao' => $_POST['observacao'], 
-                               'ativo' => 1);
+                               'ativo' =>  $_POST['ativo']);
 
-            //$this->load->view('structure/head');
-            //$this->load->view('structure/header');
-            //$this->load->view('structure/topo');
-            //$this->load->view('structure/menuLeftAdmin');
-            //$this->load->view('finalidadeForm_view');
-            //$this->load->view('structure/footer');
+            $this->receita_model->insertRecipe($arr_dados);
+
+            redirect(base_url().'receita/lista', 'refresh');
 
         }else{
 
