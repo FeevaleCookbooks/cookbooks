@@ -1,12 +1,12 @@
 <?php
 
-class recipes_model extends CI_Model {
+class receita_model extends CI_Model {
 
 
 	public function getAllRecipes(){
+		$id_usuario = $this->session->userdata("id");
 
-        $sql = $this->db->get('receita');
-        return $sql->result_array();
+        return $this->db->get_where('receita', array("id_usuario"=> $id_usuario))->result();
 
 	}
 
