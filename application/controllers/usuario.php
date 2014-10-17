@@ -20,6 +20,7 @@ class usuario extends CI_Controller {
 
     public function inserir_usuario() {
             $this->load->model('usuario_model');
+            
             if ($this->form_validation->run('usuario_form') != FALSE){    
             $arr_dados = array('nome' => $_POST['nome'],
                                 'email' => $_POST['email'],
@@ -32,7 +33,6 @@ class usuario extends CI_Controller {
             } else {
                 $this->load->view('usuario/index');
             }
-            
     }
 
     public function editar_usuario() {
