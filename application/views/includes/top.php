@@ -4,9 +4,21 @@
 
 		<div class="full" style="margin-bottom: 0;">
 
+			<?php 
+			if($this->session->userdata('id') != null) { 
+			?>
 			<span class="new-recipe">
-				<a href="add-your-recipe/index.html" class="btn">Add Your Recipe</a>
+				<a href="<?php echo base_url() ;?>receita/add" class="btn">Adicionar Receita</a>
 			</span>
+			<?php
+			} else {
+			?>
+			<span class="new-recipe">
+				<a href="<?php echo base_url() ;?>/login" class="btn">Login</a>
+			</span>
+			<?php
+			}
+			?>
 
 			<div class="main_menu">
 				<?php 
