@@ -15,7 +15,7 @@ class receita_model extends CI_Model {
 		$this->db->where('id_receita', $id);
         $sql = $this->db->get('receita');
 
-        return $sql->result_array();
+        return $sql->row_array();
 
 	}
 
@@ -44,7 +44,7 @@ class receita_model extends CI_Model {
 
     public function deleteRecipe($id){
 
-    	$this->db->where('id', $id);
+    	$this->db->where('id_receita', $id);
         $this->db->delete('receita'); 
 
     }

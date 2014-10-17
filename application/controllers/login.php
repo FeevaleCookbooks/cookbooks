@@ -26,7 +26,6 @@ class Login extends CI_Controller {
 
         $user = $_POST['email'];
         $pass = sha1($_POST['pass']);
-
         $this->load->model('login_model');
 
         $data['login'] = $this->login_model->logar($user, $pass);
@@ -37,8 +36,7 @@ class Login extends CI_Controller {
             $this->session->unset_userdata('id');
             
             $this->session->set_userdata('nomeLogado',$data['login'][0]['nome']);
-            $this->session->set_userdata('id',$data['login'][0]['id']);
-            $this->session->set_userdata('setor',$data['login'][0]['id_setor']);
+            $this->session->set_userdata('id',$data['login'][0]['id_usuario']);
             $data['nomeLog'] = $this->session->userdata('nomeLogado'); 
             $data['idLog'] = $this->session->userdata('id');
 

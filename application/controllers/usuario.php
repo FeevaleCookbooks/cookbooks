@@ -30,6 +30,8 @@ class usuario extends CI_Controller {
                                 'foto' => $_POST['foto'],
                                 'ativo' => 1);
             $this->usuario_model->insertUser($arr_dados);
+
+            $this->load->view('usuario/index');
             } else {
                 $this->load->view('usuario/index');
             }

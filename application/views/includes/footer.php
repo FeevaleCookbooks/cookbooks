@@ -28,8 +28,13 @@
 	<script type='text/javascript' src='<?php echo base_url();?>assets/wp-content/themes/wpcook/js/jquery.carouFredSel-6.2.1-packed4a02.js?ver=2013-07-18'></script>
 	<script type='text/javascript' src='<?php echo base_url();?>assets/wp-content/themes/wpcook/js/classie4a02.js?ver=2013-07-18'></script>
 	<script type='text/javascript' src='<?php echo base_url();?>assets/wp-content/themes/wpcook/js/AnimOnScroll4a02.js?ver=2013-07-18'></script>
-</body>
+	<?php
+	if($this->session->userdata("msg") != ''){
+		echo "<script>alert('".$this->session->userdata("msg")."')</script>";	
 
+		$this->session->unset_userdata("msg");
+	}
+	?>
 	</body>
 
 </html>

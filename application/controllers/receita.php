@@ -10,7 +10,7 @@ class receita extends CI_Controller {
           parent::__construct();
 
 
-        $this->session->set_userdata("id",'5');
+        $this->session->set_userdata("id", "5");
 
         $this->load->model('receita_model');
 
@@ -30,6 +30,8 @@ class receita extends CI_Controller {
 
         }
 
+
+        $this->load->view("recipe/index.php", $data);
     }
 
     public function add(){
@@ -37,6 +39,15 @@ class receita extends CI_Controller {
         $data['row_recipe'] = $this->receita_model->getAllRecipes();
         
         $this->load->view("recipe/add.php", $data);
+
+    }
+
+    public function edit($id_receita){
+
+        $data['row'] = $this->receita_model->getForId($id_receita);
+        $data['row_recipe'] = $this->receita_model->getAllRecipes();
+        
+        $this->load->view("recipe/edit.php", $data);
 
     }
 
@@ -59,7 +70,7 @@ class receita extends CI_Controller {
 
             $this->receita_model->insertRecipe($arr_dados);
 
-            redirect(base_url().'receita/lista', 'refresh');
+            redirect(base_url().'receita/add', 'refresh');
 
         }else{
 
@@ -71,7 +82,7 @@ class receita extends CI_Controller {
 
     public function editar_receita(){
 
-        if($this->session->userdata('nomeLogado') != null){
+        if($this->session->userdata('id') != null){
 
             $this->load->model('receita_model');
 
@@ -82,17 +93,14 @@ class receita extends CI_Controller {
                                'categoria' => $_POST['categoria'],
                                'foto' => $_POST['foto'], 
                                'observacao' => $_POST['observacao'], 
-                               'ativo' => 1);
+                               'ativo' =>  $_POST['ativo']);
 
             $id = $this->uri->segment(3);
-            $data['receita'] = $this->receita_model->getForId($id);
 
-            $this->load->view('structure/head');
-            $this->load->view('structure/header');
-            $this->load->view('structure/topo');
-            $this->load->view('structure/menuLeftAdmin');
-            $this->load->view('finalidadeFormUpdate_view', $data);
-            $this->load->view('structure/footer');
+            $this->receita_model->updateRecipe($id, $arr_dados);
+
+            redirect(base_url().'receita/edit/'.$id, 'refresh');
+
 
         }else{
 
@@ -101,16 +109,17 @@ class receita extends CI_Controller {
         }
     }
 
-    public function deletar_receita(){
+    public function delete(){
 
-        if($this->session->userdata('nomeLogado') != null){
+        if($this->session->userdata('id') != null){
 
             $id = $this->uri->segment(3);
 
-            $this->load->model('receita_model');
             $this->receita_model->deleteRecipe($id);
 
-            redirect('/receita/', 'refresh');   
+            $this->session->set_userdata("msg", "Receita deletada com sucesso!");
+
+            redirect(base_url().'receita/add', 'refresh');
             
         }else{
 
