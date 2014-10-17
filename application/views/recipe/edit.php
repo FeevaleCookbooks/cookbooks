@@ -13,16 +13,16 @@ $this->load->view("includes/top.php");
 
 					<div class="register-page-title">
 
-						<i class="fa fa-plus"></i>Adiconar Receita
+						<i class="fa fa-plus"></i>Editar Receita
 					</div>
 
-					<form class="form-item" action="<?php echo base_url();?>receita/inserir_receita" id="primaryPostForm" method="POST" enctype="multipart/form-data">
+					<form class="form-item" action="<?php echo base_url();?>receita/editar_receita/<?php echo $row['id_receita'] ;?>" id="primaryPostForm" method="POST" enctype="multipart/form-data">
 
 						
 								<fieldset class="input-full-width">
 
 									<label for="edit-title" class="control-label"><i class="fa fa-cutlery"></i>Nome da Receita:</label>
-									<input type="text" name="nome_receita" class="text" value="" maxlength="30" class="form-text required" />
+									<input type="text" name="nome_receita" class="text" value="<?php echo $row['nome'] ;?>" maxlength="30" class="form-text required" />
 
 								</fieldset>
 
@@ -32,11 +32,13 @@ $this->load->view("includes/top.php");
 									<label for="edit-title" class="control-label"><i class="fa fa-folder-o"></i>Categoria:</label>
 									<select name="categoria">
 										<option value=""></option>
-										<option value="1">Categoria 1</option>
-										<option value="2">Categoria 2</option>
-										<option value="3">Categoria 3</option>
-										<option value="4">Categoria 4</option>
-										<option value="5">Categoria 5</option>
+										<?php
+										for($i = 1; $i < 10; $i++){
+										?>
+										<option <?php echo $row['categoria'] == $i ? "selected=selected" : '';?> value="<?php echo $i ;?>">Categoria <?php echo $i; ?></option>
+										<?php
+										}
+										?>
 									</select>
 
 								</fieldset>
@@ -45,7 +47,7 @@ $this->load->view("includes/top.php");
 								<fieldset class="input-full-width">
 
 									<label for="edit-title" class="control-label"><i class="fa fa-key"></i>Ingredientes:</label>
-									<textarea name="ingredientes" class="text" style="width: 80%; width: -webkit-calc(100% - 100px); width: calc(100% - 100px);height:140px;"></textarea>
+									<textarea name="ingredientes" class="text" style="width: 80%; width: -webkit-calc(100% - 100px); width: calc(100% - 100px);height:140px;"><?php echo $row['ingredientes'] ;?></textarea>
 
 								</fieldset>
 
@@ -53,7 +55,7 @@ $this->load->view("includes/top.php");
 								<fieldset class="input-full-width">
 
 									<label for="edit-title" class="control-label"><i class="fa fa-file-text-o"></i>Modo de Preparo:</label>
-									<textarea name="modo_preparo" class="text" style="width: 80%; width: -webkit-calc(100% - 100px); width: calc(100% - 100px);height:140px;"></textarea>
+									<textarea name="modo_preparo" class="text" style="width: 80%; width: -webkit-calc(100% - 100px); width: calc(100% - 100px);height:140px;"><?php echo $row['modo_preparo'] ;?></textarea>
 
 								</fieldset>
 
@@ -61,7 +63,7 @@ $this->load->view("includes/top.php");
 								<fieldset class="input-full-width">
 
 									<label for="edit-title" class="control-label"><i class="fa fa-info-circle"></i>Observações:</label>
-									<textarea name="observacao" class="text" style="width: 80%; width: -webkit-calc(100% - 100px); width: calc(100% - 100px);height:140px;"></textarea>
+									<textarea name="observacao" class="text" style="width: 80%; width: -webkit-calc(100% - 100px); width: calc(100% - 100px);height:140px;"><?php echo $row['observacao'] ;?></textarea>
 
 								</fieldset>
 
@@ -70,12 +72,17 @@ $this->load->view("includes/top.php");
 
 									<label for="edit-title" class="control-label"><i class="fa fa-file-text-o"></i>Ativo:</label>
 
-									<input type="radio" name="ativo" value="1" style="float:left; width:30px;margin-top:15px;" />
+									<input <?php echo $row['ativo'] == '1' ? "checked=checked" : "" ;?> 
+									type="radio" 
+									name="ativo" 
+									value="1" 
+									style="float:left; width:30px;margin-top:15px;" />
 								</fieldset>
 
 								<fieldset class="input-half-width">
 									<label for="edit-title" class="control-label"><i class="fa fa-file-text-o"></i>Inativo:</label>
-									<input type="radio" name="ativo" value="0" style="float:left;width:30px;margin-top:15px;" />
+									<input <?php echo $row['ativo'] == '0' ? "checked=checked" : "" ;?> 
+									type="radio" name="ativo" value="0" style="float:left;width:30px;margin-top:15px;" />
 								</fieldset>
 
 
@@ -89,7 +96,7 @@ $this->load->view("includes/top.php");
 
 								<div class="publish-ad-button">
 									<input type="hidden" name="submit" value="Register" id="submit" />
-									<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><i class="fa fa-check"></i>Login</button>
+									<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><i class="fa fa-check"></i>Salvar</button>
 								</div>
 
 					</form>
