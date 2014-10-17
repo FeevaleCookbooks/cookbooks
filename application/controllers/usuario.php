@@ -23,7 +23,7 @@ class usuario extends CI_Controller {
             if ($this->form_validation->run('usuario_form') != FALSE){    
             $arr_dados = array('nome' => $_POST['nome'],
                                 'email' => $_POST['email'],
-                                'senha' => $_POST['senha'],
+                                'senha' => sha1($_POST['senha']),
                                 'cidade' => $_POST['cidade'],
                                 'profissao' => $_POST['profissao'],
                                 'foto' => $_POST['foto'],
