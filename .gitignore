@@ -1,1 +1,4 @@
 backup/*
+
+#ignorar arquivo database.php
+application/config/database.php

@@ -17,6 +17,7 @@
 						</ul>
 					</li>
 					<li id="menu-item-358" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><i class="fa fa-users"></i> Chefs</a></li>
+					<li id="menu-item-358"><a href="<?php echo site_url("login/logout");?>">Logout</a></li>
 				</ul>				
 			</div>
 
