@@ -11,6 +11,12 @@
 				<a href="<?php echo base_url() ;?>receita/add" class="btn">Adicionar Receita</a>
 			</span>
 			<?php
+			} else {
+			?>
+			<span class="new-recipe">
+				<a href="<?php echo base_url() ;?>/login" class="btn">Login</a>
+			</span>
+			<?php
 			}
 			?>
 
@@ -34,11 +40,7 @@
 					<?php 
 					if($this->session->userdata('id') != null) { ?>
 					<li id="menu-item-358"><a href="<?php echo site_url("login/logout");?>">Logout</a></li>
-					<?php }else{ ?>
-					<li id="menu-item-358"><a href="<?php echo site_url("login/");?>">Login</a></li>
-					<?php
-					}
-					?>
+					<?php } ?>
 				</ul>				
 			</div>
 
