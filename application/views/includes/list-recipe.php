@@ -4,7 +4,7 @@
 
 			<ul class="tabs container">
 				<li >
-				   	<a class="current" href="#">Latest Recipes</a>
+				   	<a class="current" href="#">Ultimas Receitas</a>
 				</li>
 			</ul>
 
