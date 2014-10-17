@@ -49,7 +49,7 @@ $this->load->view("includes/footer.php");
                     </fieldset>
                     <fieldset class="input-full-width">
                         <label for="edit-title" class="control-label"><i class="fa"></i>Foto:</label>
-                        <input type="text" name="foto" class="text" value="" maxlength="100" class="form-text" />
+                        <input type="text" name="foto" class="text" value="<?php echo $dados_perfil[0]['foto']?>" maxlength="100" class="form-text" />
                     </fieldset>
 
                     <div class="publish-ad-button">
