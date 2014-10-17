@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>WPCook - Recipes &amp; Cooking Responsive WordPress Theme | Recipe Directory WordPress Theme</title>
+	<title>Cookbook &amp; Cooking Responsive Social Networks</title>
 
 
 	<link rel="shortcut icon" href="<?php echo base_url();?>assets/wp-content/uploads/2014/05/favicon.png" type="image/x-icon" />
