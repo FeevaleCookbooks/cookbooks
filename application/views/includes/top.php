@@ -27,7 +27,8 @@
 					?>
 
 					<a href="<?php echo site_url("perfil/");?>"> Bem vindo, <?php echo $idLogado;?></a>
-					<?php }
+					<?php 
+					}
 				?>
 				<ul id="menu-main-menu" class="menu">
 					<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5 has-submenu"><a href="index.html"><i class="fa fa-home"></i></a></li>
