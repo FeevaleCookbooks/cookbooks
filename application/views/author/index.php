@@ -57,7 +57,7 @@ $this->load->view("includes/top.php");
 								
 								   
 								<span class="one_half first my-account-stats-number my-account-stats-recipes">
-									8								</span>
+									<?php echo $qtde_receitas;?></span>
 
 								<span class="one_half my-account-stats-info my-account-stats-recipes">
 									Receitas<br />

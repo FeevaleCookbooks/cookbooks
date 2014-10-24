@@ -89,7 +89,7 @@ $this->load->view("includes/top.php");
 
 								<div class="publish-ad-button">
 									<input type="hidden" name="submit" value="Register" id="submit" />
-									<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><i class="fa fa-check"></i>Login</button>
+									<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><i class="fa fa-check"></i>Cadastrar</button>
 								</div>
 
 					</form>
