@@ -12,10 +12,17 @@ class usuario_model extends CI_Model {
 		return $this->db->insert_id();
 	}
 
-        public function updateUser($id, $arr_dados = array()){
+    public function updateUser($id, $arr_dados = array()){
 
         $this->db->where('id_usuario', $id);
         $this->db->update('usuario', $arr_dados); 
 
 	}
+
+	public function updateById($params) {
+		$this->db->where('id_usuario', $this->session->userdata('id'));
+        $this->db->update('usuario', $params); 
+	}
 }
+
+

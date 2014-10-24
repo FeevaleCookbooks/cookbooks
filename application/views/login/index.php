@@ -5,56 +5,59 @@ $this->load->view("includes/top.php");
 
 <section id="blog-post">
 
-		<div id="recipe-block" class="container">
+    <div id="recipe-block" class="container">
 
-			<div class="one_half first cbp-so-section" style="margin-bottom: 0;">
+        <div class="one_half first cbp-so-section" style="margin-bottom: 0;">
 
-				<div class="recipe-block">
+            <div class="recipe-block">
 
-					<div class="register-page-title">
+                <div class="register-page-title">
 
-						<i class="fa fa-user"></i>Login Form
-					</div>
+                    <i class="fa fa-user"></i>Login
+                </div>
 
-					<form class="form-item" action="<?php echo site_url('login/checkLogin');?>" id="primaryPostForm" method="POST" enctype="multipart/form-data">
+                <form class="form-item" action="<?php echo site_url('login/checkLogin'); ?>" id="primaryPostForm" method="POST" enctype="multipart/form-data">
 
-						
-						
-								<fieldset class="input-full-width">
 
-									<label for="edit-title" class="control-label"><i class="fa fa-user"></i>E-mail:</label>
-									<input type="text" id="exampleInputEmail1" name="email" class="text" value="" maxlength="30" class="form-text required" />
 
-								</fieldset>
+                    <fieldset class="input-full-width">
 
-								<fieldset class="input-full-width">
+                        <label for="edit-title" class="control-label"><i class="fa fa-user"></i>Email:</label>
+                        <input type="text" id="exampleInputEmail1" name="email" class="text" value="" maxlength="30" class="form-text required" />
 
-									<label for="edit-title" class="control-label"><i class="fa fa-key"></i>Password:</label>
-									<input type="password" id="exampleInputPassword1" name="pass" class="text" maxlength="15" />
+                    </fieldset>
 
-								</fieldset>
+                    <fieldset class="input-full-width">
 
-								<fieldset class="input-full-width">
+                        <label for="edit-title" class="control-label"><i class="fa fa-key"></i>Senha:</label>
+                        <input type="password" id="exampleInputPassword1" name="pass" class="text" maxlength="15" />
 
-									<input name="rememberme" type="checkbox" value="forever" style="float: left; width: auto; margin-right: 5px; margin-top: 2px;"/><span style="margin-left: 10px; float: left; margin-bottom: 81px;">Remember me</span>
+                    </fieldset>
 
-								</fieldset>
+                    <fieldset class="input-full-width">
 
-								<div class="publish-ad-button">
-									<input type="hidden" name="submit" value="Register" id="submit" />
-									<button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><i class="fa fa-check"></i>Login</button>
-								</div>
+                        <a href="#">Recuperar senha</a>
+                        <br/>
+                        <input name="rememberme" type="checkbox" value="forever" style="float: left; width: auto; margin-right: 5px; margin-top: 2px;"/><span style="margin-left: 10px; float: left; margin-bottom: 81px;">Lembrar me</span>
+                        <br/>
 
-					</form>
+                    </fieldset>
 
-				</div>
+                    <div class="publish-ad-button">
+                        <input type="hidden" name="submit" value="Register" id="submit" />
+                        <button class="btn form-submit" id="edit-submit" name="op" value="Publish Ad" type="submit"><i class="fa fa-check"></i>Entrar</button>
+                    </div>
 
-			</div>
+                </form>
 
-			
-		</div>
+            </div>
 
-	</section>
+        </div>
+
+
+    </div>
+
+</section>
 
 
 
