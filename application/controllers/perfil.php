@@ -3,19 +3,28 @@
 
 class perfil extends CI_Controller {
 
-	public function index()
-	{
+	public function index(){
 		$this->load->model("perfil_model");
 		$data['dados_perfil'] = $this->perfil_model->getForId();
+		
+		$data['receita'] = $this->perfil_model->getReceitasByPerfil();
+
+
 		$this->load->view("author/index", $data);
 	}
 
 	public function editar() {
-
 		$this->load->library('session');
 		$this->load->model('perfil_model');
 		$data['dados_perfil'] = $this->perfil_model->getForId();
 		$this->load->view('author/editar', $data);
+	}
+
+	public function getReceitasByPerfil(){
+
+		$this->load->model('perfil_model');
+		$this->perfil_model->get)
+
 	}
 
 	public function salvar_edicao($arr_dados = array() ) {
