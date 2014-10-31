@@ -64,7 +64,7 @@ $this->load->view("includes/top.php");
 									Publicadas<br />
 									<i class="fa fa-cutlery"></i>
 								</span>
-								<span class="block-recipe-info-hover-link"><a href="<?php echo site_url("perfil/editar");?>">Editar Perfil</a></span>
+								<span class="btn"><a href="<?php echo site_url("perfil/editar");?>">Editar Perfil</a></span>
 							</div>
 						</div>
 
