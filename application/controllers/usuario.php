@@ -13,7 +13,6 @@ class usuario extends CI_Controller {
     
     
 	public function index(){
-
         $this->load->view('usuario/index');
 
 	}

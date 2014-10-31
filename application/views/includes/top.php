@@ -14,7 +14,7 @@
 			} else {
 			?>
 			<span class="new-recipe">
-				<a href="<?php echo base_url() ;?>/login" class="btn">Login</a>
+				<a href="<?php echo base_url() ;?>login" class="btn">Login</a>
 			</span>
 			<?php
 			}
@@ -24,11 +24,11 @@
 				<?php 
 					if($this->session->userdata('id') != null) { 
 					$idLogado = $this->session->userdata('nome');
+					$nomeLogado = $this->session->userdata('nomeLogado');
 					?>
+					<a href="<?php echo site_url("perfil/");?>"> Bem vindo, <?php echo $nomeLogado;?></a>
+					<?php }
 
-					<a href="<?php echo site_url("perfil/");?>"> Bem vindo, <?php echo $idLogado;?></a>
-					<?php 
-					}
 				?>
 				<ul id="menu-main-menu" class="menu">
 					<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5 has-submenu"><a href="index.html"><i class="fa fa-home"></i></a></li>

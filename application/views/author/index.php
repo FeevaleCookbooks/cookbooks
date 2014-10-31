@@ -57,14 +57,14 @@ $this->load->view("includes/top.php");
 								
 								   
 								<span class="one_half first my-account-stats-number my-account-stats-recipes">
-									8								</span>
+									<?php echo $qtde_receitas;?></span>
 
 								<span class="one_half my-account-stats-info my-account-stats-recipes">
 									Receitas<br />
 									Publicadas<br />
 									<i class="fa fa-cutlery"></i>
 								</span>
-								<span class="block-recipe-info-hover-link"><a href="<?php echo site_url("perfil/editar");?>">Editar Perfil</a></span>
+								<span class="btn"><a href="<?php echo site_url("perfil/editar");?>">Editar Perfil</a></span>
 							</div>
 						</div>
 
