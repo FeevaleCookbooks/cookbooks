@@ -9,9 +9,6 @@ class receita extends CI_Controller {
     public function __construct() {
           parent::__construct();
 
-
-        $this->session->set_userdata("id", "5");
-
         $this->load->model('receita_model');
 
      }
@@ -53,29 +50,43 @@ class receita extends CI_Controller {
 
     public function inserir_receita(){
 
-        if($this->session->userdata('id') != null){
 
-            $_POST["foto"] = "endereco_foto";
-            
-            $idLogado = $this->session->userdata('id');
+      $config['upload_path'] = './assets/upload/recipe/';
+      $config['allowed_types'] = 'gif|jpg|png';
+      $config['image_width']  = '1140';
 
-            $arr_dados = array('id_usuario' => $this->session->userdata('id'), 
-                               'nome' => $_POST['nome_receita'],
-                               'ingredientes' => $_POST['ingredientes'],
-                               'modo_preparo' => $_POST['modo_preparo'],
-                               'categoria' => $_POST['categoria'],
-                               'foto' => $_POST['foto'], 
-                               'observacao' => $_POST['observacao'], 
-                               'ativo' =>  $_POST['ativo']);
+      $this->load->library("upload", $config);
 
-            $this->receita_model->insertRecipe($arr_dados);
+      $_POST['foto'] = $_FILES['foto']['name'];
 
-            redirect(base_url().'receita/add', 'refresh');
+      if ( ! $this->upload->do_upload('foto')){
+        $error = array('error' => $this->upload->display_errors());
 
-        }else{
+        redirect('/login/', 'refresh');
+      } else {
 
-            redirect('/login/', 'refresh');
+          if($this->session->userdata('id') != null){
+              
+              $idLogado = $this->session->userdata('id');
 
+              $arr_dados = array('id_usuario' => $this->session->userdata('id'), 
+                                 'nome' => $_POST['nome_receita'],
+                                 'ingredientes' => $_POST['ingredientes'],
+                                 'modo_preparo' => $_POST['modo_preparo'],
+                                 'categoria' => $_POST['categoria'],
+                                 'foto' => $_POST['foto'], 
+                                 'observacao' => $_POST['observacao'], 
+                                 'ativo' =>  $_POST['ativo']);
+
+              $this->receita_model->insertRecipe($arr_dados);
+
+              redirect(base_url().'receita/add', 'refresh');
+
+          }else{
+
+              redirect('/login/', 'refresh');
+
+          }
         }
 
     }
@@ -91,9 +102,20 @@ class receita extends CI_Controller {
                                'ingredientes' => $_POST['ingredientes'],
                                'modo_preparo' => $_POST['modo_preparo'],
                                'categoria' => $_POST['categoria'],
-                               'foto' => $_POST['foto'], 
                                'observacao' => $_POST['observacao'], 
                                'ativo' =>  $_POST['ativo']);
+
+            if(!empty($_FILES['foto']['name'])){
+              $arr_dados = array('foto' => $_FILES['foto']['name']);
+
+              $config['upload_path'] = './assets/upload/recipe/';
+              $config['allowed_types'] = 'gif|jpg|png';
+              $config['image_width']  = '1140';
+
+              $this->load->library("upload", $config);
+
+              $this->upload->do_upload('foto');
+            }
 
             $id = $this->uri->segment(3);
 
