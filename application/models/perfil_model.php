@@ -22,9 +22,14 @@
                     ");
 		
         return $query->result_array();
+		
+		}
 
-	}
+		public function getReceitasByPerfil(){
 
+			return $this->db->from("receita")->where("", )
+
+		}
 
 	}
 ?>
