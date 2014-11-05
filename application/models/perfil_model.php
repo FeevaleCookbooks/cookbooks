@@ -16,7 +16,7 @@
                             usuario.ativo,
                             COUNT(receita.id_receita) AS quantidade_receitas
                     FROM usuario 
-                    JOIN receita ON receita.id_usuario = usuario.id_usuario
+                    LEFT JOIN receita ON receita.id_usuario = usuario.id_usuario
                     WHERE usuario.id_usuario = " . $this->session->userdata('id')."
                     GROUP BY usuario.id_usuario
                     ");
