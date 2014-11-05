@@ -7,6 +7,8 @@
         </ul>
         <div class="pane container">
             <?php
+            if(isset($recipes) && is_array($recipes)) {
+                
             for ($i = 0; $i < count($recipes); $i++) {
                 $class = '';
                 if ($i == 4 || $i == 0) {
@@ -30,6 +32,9 @@
                     </span>
                 </a>
             <?php
+            }
+            } else {
+                echo "Nenhuma receita encontrada";
             }
             ?>
         </div>
