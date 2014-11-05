@@ -20,7 +20,7 @@ class usuario extends CI_Controller {
     public function inserir_usuario() {
             $this->load->model('usuario_model');
 
-            $config['upload_path'] = './assets/upload/recipe/';
+          $config['upload_path'] = './assets/upload/recipe/';
           $config['allowed_types'] = 'gif|jpg|png';
           $config['image_width']  = '1140';
 

@@ -21,13 +21,13 @@
                     GROUP BY usuario.id_usuario
                     ");
 		
-        return $query->result_array();
+            return $query->result_array();
 		
 		}
 
 		public function getReceitasByPerfil(){
 
-			return $this->db->from("receita")->where("", )
+			return $this->db->from("receita")->where("id_usuario", $this->session->userdata('id'));
 
 		}
 

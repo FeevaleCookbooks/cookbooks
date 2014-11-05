@@ -23,7 +23,7 @@ class perfil extends CI_Controller {
 	public function getReceitasByPerfil(){
 
 		$this->load->model('perfil_model');
-		$this->perfil_model->get)
+		$this->perfil_model->get();
 
 	}
 

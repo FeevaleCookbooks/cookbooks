@@ -150,7 +150,6 @@ class receita extends CI_Controller {
         }
 
     }
-
    
 
 }
