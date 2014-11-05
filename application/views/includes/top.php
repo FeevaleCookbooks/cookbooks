@@ -32,15 +32,15 @@
 				?>
 				<ul id="menu-main-menu" class="menu">
 					<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5 has-submenu"><a href="index.html"><i class="fa fa-home"></i></a></li>
-					<li id="menu-item-958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-958 has-submenu"><a href="recipes/index.html"><i class="fa fa-cutlery"></i> Recipes</a>
+					<li id="menu-item-958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-958 has-submenu"><a href="recipes/index.html"><i class="fa fa-cutlery"></i> Receitas</a>
 						<ul class="sub-menu">
-							<li id="menu-item-964" class="menu-item menu-item-type-taxonomy menu-item-object-recipesets"><a href="recipesets/entrees/index.html"><i class="fa fa-folder-o"></i> Entrees</a></li>
+							<li id="menu-item-964" class="menu-item menu-item-type-taxonomy menu-item-object-recipesets"><a href="recipesets/entrees/index.html"><i class="fa fa-folder-o"></i> Destaques</a></li>
 						</ul>
 					</li>
-					<li id="menu-item-358" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><i class="fa fa-users"></i> Chefs</a></li>
+					<!--<li id="menu-item-358" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><i class="fa fa-users"></i> Chefes</a></li>-->
 					<?php 
 					if($this->session->userdata('id') != null) { ?>
-					<li id="menu-item-358"><a href="<?php echo site_url("login/logout");?>">Logout</a></li>
+					<li id="menu-item-358"><a href="<?php echo site_url("login/logout");?>">Sair</a></li>
 					<?php } ?>
 				</ul>				
 			</div>

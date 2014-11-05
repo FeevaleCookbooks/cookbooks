@@ -5,8 +5,21 @@ class receita_model extends CI_Model {
 
 	public function getAllRecipes(){
 		$id_usuario = $this->session->userdata("id");
-
         return $this->db->get_where('receita', array("id_usuario"=> $id_usuario))->result();
+
+	}
+
+	public function getAllRecipesAndUser(){
+
+		$this->db->select('r.id_receita, r.id_usuario, r.nome, r.ingredientes, r.modo_preparo, r.categoria, r.foto, r.observacao, r.ativo, u.nome as nome_user');
+        $this->db->from('receita as r');
+        $this->db->join('usuario as u', "r.id_usuario = u.id_usuario");
+        $this->db->where('r.ativo', 1);
+        $this->db->order_by('r.id_receita', 'DESC');
+
+        $sql = $this->db->get();
+        
+        return $sql->result_array();
 
 	}
 

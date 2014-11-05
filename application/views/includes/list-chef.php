@@ -20,7 +20,7 @@
 
 
                     <?php
-                    for($i=0;$i<8;$i++){
+                    for($i=0;$i<count($chefs);$i++){
                         $class = '';
                         if($i == 4 || $i == 0)
                             $class = "first";
@@ -31,7 +31,7 @@
                 <div class="author-block-home-bg">
 
 
-                    <img src='assets/upload/author/teste2.jpg' alt=''/>
+                    <img src="assets/upload/author/<?php echo $chefs[$i]['id_usuario'].'.jpg';?>" alt=''/>
                 </div>
 
                 <div class="author-block-home-border"></div>
@@ -43,26 +43,21 @@
                         <div class="recipe-author-image">
 
 
-                            <img class='author-avatar' src='assets/upload/author/teste.jpg' alt='' />
+                            <img class='author-avatar' src="assets/upload/author/<?php echo $chefs[$i]['id_usuario'].'.jpg';?>" alt='' />
                         </div>
 
                     </div>
 
                     <div class="author-list-name">
-                        Helen Whiteman							</div>
-
-                    <div class="author-list-total-posts">
-                        Wrote 8 recipes and the latest is <a href='recipe/grilled-chicken-drumsticks/index.html'>Grilled Chicken Drumsticks</a>
+                        <?php echo $chefs[$i]['nome'];?>
                     </div>
-
                     <div class="author-list-link-profile">
-                        <a href="author/helen/index.html"><i class="fa fa-user"></i>View Profile</a>
+                        <a href="<?php echo site_url('perfil/ver_perfil/'.$chefs[$i]['id_usuario']);?>"><i class="fa fa-user"></i>View Profile</a>
                     </div>
 
                 </div>
 
             </div> 
-
 
                 <?php
                 }
