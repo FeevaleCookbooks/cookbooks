@@ -13,14 +13,13 @@ class receita extends CI_Controller {
 
      }
 
-
     public function index() {
 
         if($this->session->userdata('id') != null){
 
             $idLogado = $this->session->userdata('id');
             $data['receita'] = $this->receita_model->getAllRecipes();
-            
+          
         }else{
 
             redirect('/login/', 'refresh');
@@ -49,8 +48,6 @@ class receita extends CI_Controller {
     }
 
     public function inserir_receita(){
-
-
       $config['upload_path'] = './assets/upload/recipe/';
       $config['allowed_types'] = 'gif|jpg|png';
       $config['image_width']  = '1140';
@@ -59,10 +56,10 @@ class receita extends CI_Controller {
 
       $_POST['foto'] = $_FILES['foto']['name'];
 
-      if ( ! $this->upload->do_upload('foto')){
+      if (! $this->upload->do_upload('foto')){
         $error = array('error' => $this->upload->display_errors());
 
-        redirect('/login/', 'refresh');
+        redirect(base_url().'receita/add', 'refresh');
       } else {
 
           if($this->session->userdata('id') != null){
@@ -83,9 +80,7 @@ class receita extends CI_Controller {
               redirect(base_url().'receita/add', 'refresh');
 
           }else{
-
-              redirect('/login/', 'refresh');
-
+              redirect(base_url().'receita/add', 'refresh');
           }
         }
 
@@ -151,5 +146,13 @@ class receita extends CI_Controller {
 
     }
    
+    public function listar () {
+        if($this->session->userdata('id') != null){
+            $data['receitas'] = $this->receita_model->getAllRecipesSemIdUsuario();
+        }else{
+          redirect('/login/', 'refresh');
+        }    
 
+        $this->load->view("recipe/list-recipes.php", $data);  
+    }
 }
