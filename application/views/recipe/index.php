@@ -3,7 +3,6 @@
 $this->load->view("includes/header.php");
 $this->load->view("includes/top.php");
 $this->load->model('receita_model');
-
 ?>
 
 
