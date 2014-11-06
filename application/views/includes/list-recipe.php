@@ -25,7 +25,7 @@
                         <span class="block-recipe-info-image">
                             <img class='author-avatar' src="<?php echo base_url();?>assets/upload/author/<?php echo $receitas[$i]['foto_user']; ?>"/>
                         </span>
-                        <span class="block-recipe-info-title"><?php echo $receitas[$i]['nome_user'] ?></span>
+                        <span class="block-recipe-info-title"><?php echo $receitas[$i]['nome'] ?></span>
                     </span>
                     <span class="block-recipe-info-hover">
                         <span class="block-recipe-info-hover-title"><?php echo $receitas[$i]['nome'] ?></span>

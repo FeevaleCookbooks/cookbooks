@@ -11,6 +11,7 @@ class Home extends CI_Controller {
 
 		$data['recipes'] = $this->receita_model->getAllRecipesAndUser();
 		$data['chefs'] = $this->usuario_model->getForId();
+		$data['receitas'] = $this->receita_model->getAllRecipesAndUser(6);
 
 		$this->load->view('home/index', $data);
 	}

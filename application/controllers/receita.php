@@ -33,6 +33,7 @@ class receita extends CI_Controller {
     public function add(){
 
         $data['row_recipe'] = $this->receita_model->getAllRecipes();
+        $data['row_categoria'] = $this->receita_model->getCategoriasReceitas();
         
         $this->load->view("recipe/add.php", $data);
 
@@ -42,6 +43,7 @@ class receita extends CI_Controller {
 
         $data['row'] = $this->receita_model->getForId($id_receita);
         $data['row_recipe'] = $this->receita_model->getAllRecipes();
+        $data['row_categoria'] = $this->receita_model->getCategoriasReceitas();
         
         $this->load->view("recipe/edit.php", $data);
 
@@ -148,15 +150,12 @@ class receita extends CI_Controller {
 
     public function interna($id){
 
-      if($this->session->userdata('id') != null){
 
-        $this->load->model('receita_model');
-        $this->load->model('perfil_model');
-        $data['receita'] = $this->receita_model->getForId($id);
-        $usuario = $this->perfil_model->getForId($data);
-        $this->load->view("recipe/index.php", $data);
-        
-      }
+      $this->load->model('receita_model');
+      $data['receita'] = $this->receita_model->getForId($id);
+      $this->load->view("recipe/index.php", $data);
+      
+    
 
     }
    

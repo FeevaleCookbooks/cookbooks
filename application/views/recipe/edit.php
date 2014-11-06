@@ -30,12 +30,13 @@ $this->load->view("includes/top.php");
 								<fieldset class="input-full-width">
 
 									<label for="edit-title" class="control-label"><i class="fa fa-folder-o"></i>Categoria:</label>
+
 									<select name="categoria">
-										<option value=""></option>
+										<option value="">Selecione</option>
 										<?php
-										for($i = 1; $i < 10; $i++){
-										?>
-										<option <?php echo $row['categoria'] == $i ? "selected=selected" : '';?> value="<?php echo $i ;?>">Categoria <?php echo $i; ?></option>
+									        foreach($row_categoria as $categoria) {
+									    ?>
+										<option  <?php echo $row['categoria'] == $categoria['id_categoria'] ? "selected=selected" : '';?> value="<?php echo $categoria['id_categoria'];?>"><?php echo $categoria['nome'];?></option>
 										<?php
 										}
 										?>

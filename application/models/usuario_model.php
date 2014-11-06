@@ -3,7 +3,11 @@
 class usuario_model extends CI_Model {
 
 	public function getForId() {
-		$sql = $this->db->get('usuario');
+		$sql = $this->db->select('u.*, r.foto as foto_receita')
+					->join("receita as r", "r.id_usuario = u.id_usuario AND r.foto is not null", "LEFT")
+					->group_by('u.id_usuario')
+					->get('usuario as u');
+					//echo $this->db->last_query();
         return $sql->result_array();
 	}	
 

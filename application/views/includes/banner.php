@@ -18,13 +18,13 @@
                                 <div class="feat-post-cuisine-box-cuisine">
                                     <i class="fa fa-cutlery"></i>
                                     <div class="recipe-categories">
-                                        <p><?php echo $r['nome'] ?></p>
+                                        <p><?php echo $r['nome_categoria'] ?></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="feat-post-black-box">
                                 <div class="feat-post-black-box-content">
-                                    <div class="feat-post-title"><a href="recipe/traditional-american-hot-dog/index.html"><?php echo $r['nome'] ?></a></div>
+                                    <div class="feat-post-title"><a href="<?php echo base_url().'receita/interna/'.$r['id_receita']?>"><?php echo $r['nome'] ?></a></div>
                                     <div class="full"> <?php
                                         $word_limit = 50;
                                         $string = $r['observacao'];
@@ -40,7 +40,7 @@
                                     <div class="recipe-author-image">
                                         <img class='author-avatar' src="<?php echo base_url();?>assets/upload/author/<?php echo $r['foto_user']; ?>" alt='' /></div>
                                     <div class="recipe-author-name">
-                                        <a href="author/michael/index.html" title="<?php echo $r['nome_user'];?>" rel="author">
+                                        <a href="<?php echo base_url().'perfil/interna/'.$r['id_usuario']?>" title="<?php echo $r['nome_user'];?>" rel="author">
                                             <?php echo $r['nome_user'] ?>
                                         </a>
                                     </div>

@@ -31,12 +31,14 @@ $this->load->view("includes/top.php");
 
 									<label for="edit-title" class="control-label"><i class="fa fa-folder-o"></i>Categoria:</label>
 									<select name="categoria">
-										<option value=""></option>
-										<option value="1">Categoria 1</option>
-										<option value="2">Categoria 2</option>
-										<option value="3">Categoria 3</option>
-										<option value="4">Categoria 4</option>
-										<option value="5">Categoria 5</option>
+										<option value="">Selecione</option>
+										<?php
+									        foreach($row_categoria as $categoria) {
+									    ?>
+										<option value="<?php echo $categoria['id_categoria'];?>"><?php echo $categoria['nome'];?></option>
+										<?php
+										}
+										?>
 									</select>
 
 								</fieldset>
