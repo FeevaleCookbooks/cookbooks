@@ -145,6 +145,20 @@ class receita extends CI_Controller {
         }
 
     }
+
+    public function interna($id){
+
+      if($this->session->userdata('id') != null){
+
+        $this->load->model('receita_model');
+        $this->load->model('perfil_model');
+        $data['receita'] = $this->receita_model->getForId($id);
+        $usuario = $this->perfil_model->getForId($data);
+        $this->load->view("recipe/index.php", $data);
+        
+      }
+
+    }
    
     public function listar () {
         if($this->session->userdata('id') != null){
