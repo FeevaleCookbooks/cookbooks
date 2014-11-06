@@ -10,6 +10,7 @@ class Author extends CI_Controller {
 		$this->load->library('session');
 
 		$this->load->model('receita_model');
+		$this->load->model('perfil_model');
 
 		$user = $_POST['email'];
         $pass = sha1($_POST['pass']);

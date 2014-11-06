@@ -9,6 +9,11 @@ class receita_model extends CI_Model {
 
 	}
 
+    public function getAllRecipesSemIdUsuario() 
+    {
+        return $this->db->get('receita')->result();
+    }
+
 	public function getAllRecipesAndUser(){
 
 		$this->db->select('r.id_receita, r.id_usuario, r.nome, r.ingredientes, r.modo_preparo, r.categoria, r.foto, r.observacao, r.ativo, u.nome as nome_user');
@@ -25,16 +30,16 @@ class receita_model extends CI_Model {
 
 	public function getForId($id){
 
-		$this->db->where('id_receita', $id);
+        $this->db->where('id_receita', $id);
         $sql = $this->db->get('receita');
 
         return $sql->row_array();
 
 	}
 
-	public function getForIdUser($id){
+    public function getForIdUser($id){
 
-		$this->db->where('id_usuario', $id);
+        $this->db->where('id_usuario', $id);
         $sql = $this->db->get('receita');
 
         return $sql->result_array();

@@ -13,6 +13,7 @@ class usuario extends CI_Controller {
     
     
 	public function index(){
+            $data['receita'] = $this->receita_model->getAllRecipes();
         $this->load->view('usuario/index');
 
 	}
