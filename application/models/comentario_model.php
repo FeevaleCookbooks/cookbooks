@@ -9,6 +9,13 @@ class comentario_model extends CI_Model {
 
 	}
 
+	public function get($id){
+
+
+		return $this->db->from("comentario")->where('id_receita', $id)->get()->result_array();
+
+	}
+
     public function delete($id){
 
     	$this->db->delete("comentario", $id);
