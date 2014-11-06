@@ -9,7 +9,7 @@
                     foreach ($recipes as $r) {
                         ?>
                         <span id='<?php echo $r['id_receita']; ?>' class='feat-recipe-big-image'>
-                            <img src="assets/upload/recipe/<?php echo $r['id_receita'] . '.jpg' ?>" alt=''/>
+                            <img src="<?php echo base_url();?>assets/upload/recipe/<?php echo $r['foto']; ?>" alt=''/>
                             <div class="carousel-feat-recipes-shadow"></div>
                             <div class="feat-post-cuisine-box">
                                 <div class="feat-post-cuisine-box-feat">
@@ -38,9 +38,9 @@
                                 </div>
                                 <div class="recipe-author-header">
                                     <div class="recipe-author-image">
-                                        <img class='author-avatar' src="assets/upload/author/<?php echo $r['id_usuario'] . '.jpg'; ?>" alt='' /></div>
+                                        <img class='author-avatar' src="<?php echo base_url();?>assets/upload/author/<?php echo $r['foto_user']; ?>" alt='' /></div>
                                     <div class="recipe-author-name">
-                                        <a href="author/michael/index.html" title="Posts by Michael Doe" rel="author">
+                                        <a href="author/michael/index.html" title="<?php echo $r['nome_user'];?>" rel="author">
                                             <?php echo $r['nome_user'] ?>
                                         </a>
                                     </div>
@@ -52,33 +52,6 @@
                         <?php
                     }
                     ?>
-                    <script type="text/javascript">
-                        // <![CDATA[
-                        var disqus_shortname = 'alexgurghis';
-                        (function () {
-                            var nodes = document.getElementsByTagName('span');
-                            for (var i = 0, url; i < nodes.length; i++) {
-                                if (nodes[i].className.indexOf('dsq-postid') != -1) {
-                                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
-                                    url = nodes[i].parentNode.href.split('#', 1);
-                                    if (url.length == 1) {
-                                        url = url[0];
-                                    }
-                                    else {
-                                        url = url[1];
-                                    }
-                                    nodes[i].parentNode.href = url + '#disqus_thread';
-                                }
-                            }
-                            var s = document.createElement('script');
-                            s.async = true;
-                            s.type = 'text/javascript';
-                            s.src = '//' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
-                            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-                        }());
-                        //]]>
-                    </script>
-
 
                 </div>
 
@@ -86,22 +59,22 @@
 
             <div id="thumbs-wrapper-feat-recipes">
                 <div id="thumbs-feat-recipes">
-<?php
-for ($i = 0; $i < count($recipes); $i++) {
-    ?>
-                        <a href="receita/interna/<?php echo $r['id_receita'];?>" class='selected'>
+                    <?php
+                    for ($i = 0; $i < count($recipes); $i++) {
+                        ?>
+                        <a href="#<?php echo $recipes[$i]['id_receita'] ;?>">
                             <span class='image-thin-border'>
                                 <span class='image-big-border'>
                                     <span class='image-small-border'>
-                                        <img src="assets/upload/recipe/<?php echo $r['id_receita'] . '.jpg'; ?>"/>
+                                        <img src="<?php echo base_url();?>assets/upload/recipe/<?php echo $recipes[$i]['foto']; ?>"/>
                                     </span>
                                 </span>
                             </span>
                             <span class='feat-recipe-thumb-title'><?php echo $recipes[$i]['nome']; ?></span>
                         </a>
-    <?php
-}
-?>
+                        <?php
+                    }
+                    ?>
                 </div>
                 <a id="prev" href="#"><i class="fa fa-angle-up"></i></a>
                 <a id="next" href="#"><i class="fa fa-angle-down"></i></a>

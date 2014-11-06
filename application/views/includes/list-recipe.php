@@ -16,14 +16,14 @@
                     $class = "first";
                 }
             ?>
-                <a class="author-recipe-block <?php echo $class; ?>" href="">
+                <a class="author-recipe-block <?php echo $class; ?>" href="<?php echo base_url();?>receita/interna/<?php echo $receitas[$i]['id_receita'];?>">
                     <span class="block-recipe-image">
-                        <img src="assets/upload/recipe/<?php echo $receitas[$i]['id_receita'].'.jpg' ?>" alt=''/>
+                        <img src="<?php echo base_url();?>assets/upload/recipe/<?php echo $receitas[$i]['foto']; ?>" alt=''/>
                     </span>
                     <span class="block-recipe-border"></span>	
                     <span class="block-recipe-info-box">
                         <span class="block-recipe-info-image">
-                            <img class='author-avatar' src="assets/upload/author/<?php echo $receitas[$i]['id_usuario'].'.jpg';?>"/>
+                            <img class='author-avatar' src="<?php echo base_url();?>assets/upload/author/<?php echo $receitas[$i]['foto_user']; ?>"/>
                         </span>
                         <span class="block-recipe-info-title"><?php echo $receitas[$i]['nome_user'] ?></span>
                     </span>

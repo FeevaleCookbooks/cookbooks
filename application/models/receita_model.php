@@ -6,8 +6,19 @@ class receita_model extends CI_Model {
 	public function getAllRecipes(){
 		$id_usuario = $this->session->userdata("id");
         return $this->db->get_where('receita', array("id_usuario"=> $id_usuario))->result();
-
 	}
+
+
+    public function getAllRecipesArray(){
+        $this->db->select('r.id_receita, r.id_usuario, r.nome, r.ingredientes, r.modo_preparo, r.categoria, r.foto, r.observacao, r.ativo, u.nome as nome_user, u.foto as foto_user');
+        $this->db->from('receita as r');
+        $this->db->join('usuario as u', "r.id_usuario = u.id_usuario");
+        $this->db->where('r.ativo', 1);
+        $this->db->where("r.id_usuario", $this->session->userdata("id"));
+        $this->db->order_by('r.id_receita', 'DESC');
+
+        return $this->db->get()->result_array();
+    }
 
     public function getAllRecipesSemIdUsuario() 
     {
@@ -16,7 +27,7 @@ class receita_model extends CI_Model {
 
 	public function getAllRecipesAndUser(){
 
-		$this->db->select('r.id_receita, r.id_usuario, r.nome, r.ingredientes, r.modo_preparo, r.categoria, r.foto, r.observacao, r.ativo, u.nome as nome_user');
+		$this->db->select('r.id_receita, r.id_usuario, r.nome, r.ingredientes, r.modo_preparo, r.categoria, r.foto, r.observacao, r.ativo, u.nome as nome_user, u.foto as foto_user');
         $this->db->from('receita as r');
         $this->db->join('usuario as u', "r.id_usuario = u.id_usuario");
         $this->db->where('r.ativo', 1);
