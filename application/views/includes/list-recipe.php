@@ -8,8 +8,6 @@
         <div class="pane container">
             <?php
             
-            
-            
             if(isset($receitas) && is_array($receitas)) {
                 
             for ($i = 0; $i < count($receitas); $i++) {

@@ -163,9 +163,10 @@ class receita extends CI_Controller {
     public function listar () {
         if($this->session->userdata('id') != null){
             $data['receitas'] = $this->receita_model->getAllRecipesSemIdUsuario();
+            $data['receita'] = $this->receita_model->getAllRecipes();
         }else{
           redirect('/login/', 'refresh');
-        }    
+        }
 
         $this->load->view("recipe/list-recipes.php", $data);  
     }
