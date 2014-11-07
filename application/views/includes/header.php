@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>Cookbook &amp; Cooking Responsive Social Networks</title>
+	<title>Cookbooks</title>
 
 
 	<link rel="shortcut icon" href="<?php echo base_url();?>assets/wp-content/uploads/2014/05/favicon.png" type="image/x-icon" />
