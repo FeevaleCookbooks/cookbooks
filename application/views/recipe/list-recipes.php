@@ -9,15 +9,12 @@ $this->load->view("includes/top.php");
     ?>
     <div class="container">
         <div class="pane container">
-            <a class="author-recipe-block" href="">
+            <a class="author-recipe-block" href="receita/interna/<?php echo $receita->id_receita;?>">
                 <span class="block-recipe-image">
-                    <img src="assets/upload/recipe/<?php echo $receita->foto;?>"/>
+                    <img src="<?php echo base_url();?>assets/upload/recipe/<?php echo $receita->foto;?>"/>
                 </span>
                 <span class="block-recipe-border"></span>	
                 <span class="block-recipe-info-box">
-                    <span class="block-recipe-info-image">
-                        
-                    </span>
                     <span class="block-recipe-info-title">Rafael Zorn</span>
                 </span>
                 <span class="block-recipe-info-hover">
