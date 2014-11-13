@@ -28,6 +28,7 @@ ENGINE=INNODB;
 CREATE TABLE `receita` (
   `id_receita` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(11) NOT NULL DEFAULT '0',
+  `categoria` int(11) DEFAULT '0',
   `nome` varchar(255),
   `ingredientes` text,
   `modo_preparo` text,
@@ -79,6 +80,14 @@ CREATE TABLE `seguidor` (
 )
 ENGINE=INNODB;
 
+CREATE TABLE `categoria` (
+  `id_categoria` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255),
+  `ativo` tinyint(4) DEFAULT '1',
+  PRIMARY KEY(`id_categoria`)
+)
+ENGINE=INNODB;
+
 
 
 -- ----------------------------- --
@@ -89,6 +98,12 @@ ENGINE=INNODB;
 ALTER TABLE `receita` ADD
   CONSTRAINT `Ref_01` FOREIGN KEY (`id_usuario`)
     REFERENCES `usuario`(`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION;
+
+ALTER TABLE `receita` ADD
+  CONSTRAINT `Ref_12` FOREIGN KEY (`categoria`)
+    REFERENCES `categoria`(`id_categoria`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
 
@@ -155,4 +170,5 @@ ALTER TABLE `seguidor` ADD
     REFERENCES `usuario`(`id_usuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION;
+
 

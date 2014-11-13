@@ -9,7 +9,7 @@
 
     <ul class="tabs container">
         <li >
-            <a class="current" href="#">Meet Our To Chefs</a>
+            <a class="current" href="#">Encontre seus Chefs</a>
         </li>
     </ul>
 
@@ -20,6 +20,7 @@
 
 
                     <?php
+
                     for($i=0;$i<count($chefs);$i++){
                         $class = '';
                         if($i == 4 || $i == 0)
@@ -31,7 +32,7 @@
                 <div class="author-block-home-bg">
 
 
-                    <img src="assets/upload/author/<?php echo $chefs[$i]['id_usuario'].'.jpg';?>" alt=''/>
+                    <img src="<?php echo base_url();?>assets/upload/recipe/<?php echo $chefs[$i]['foto_receita']; ?>" alt=''/>
                 </div>
 
                 <div class="author-block-home-border"></div>
@@ -43,7 +44,7 @@
                         <div class="recipe-author-image">
 
 
-                            <img class='author-avatar' src="assets/upload/author/<?php echo $chefs[$i]['id_usuario'].'.jpg';?>" alt='' />
+                            <img class='author-avatar' src="<?php echo base_url();?>assets/upload/author/<?php echo $chefs[$i]['foto']; ?>" alt='' />
                         </div>
 
                     </div>
@@ -52,7 +53,7 @@
                         <?php echo $chefs[$i]['nome'];?>
                     </div>
                     <div class="author-list-link-profile">
-                        <a href="<?php echo site_url('perfil/ver_perfil/'.$chefs[$i]['id_usuario']);?>"><i class="fa fa-user"></i>View Profile</a>
+                        <a href="<?php echo site_url('perfil/interna/'.$chefs[$i]['id_usuario']);?>"><i class="fa fa-user"></i>View Profile</a>
                     </div>
 
                 </div>

@@ -15,7 +15,7 @@ $this->load->view("includes/top.php");
             <div class="one_half first">
                 <div class="my-account-author-header">
                     <div class="my-account-author-image">
-                        <img class='author-avatar' src='../../wp-content/uploads/bfi_thumb/Mark-2womqu6w2y6wskdm4h0cga.jpg' alt='' />						</div>
+                        <img class='author-avatar' src='<?php echo base_url();?>assets/upload/author/<?php echo $dados_perfil[0]['foto']; ?>' alt='' />						</div>
                     <div class="my-account-author-name">
                         <?= $dados_perfil[0]['nome']; ?>
                     </div>
@@ -25,9 +25,8 @@ $this->load->view("includes/top.php");
                     <div class="my-account-author-bg-stripe"></div>
                     <div class="my-account-author-description">
                         <p>Cidade: <?= $dados_perfil[0]['cidade'] ?></p>
+                        <p>Profissão: <?= $dados_perfil[0]['profissao'] ?></p>
                         <p><?= $dados_perfil[0]['observacao']; ?></p>
-                        <div class="my-account-author-badges-box">
-                        </div>
                         <div class="my-account-stats-content" style="border: 0; background: none;">
                             <div class="one_half first" style="margin-bottom: 0;">
                                 <span class="one_half first my-account-stats-number my-account-stats-recipes">

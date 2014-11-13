@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <DBMODEL Version="2" TYPE="MySQL">
-<MODELSETTINGS MDDVERSION="2.1.2 (build 998)" ModelProject="" ModelName="modelo" ModelCompany="" ModelAuthor="" ModelVersion="" ModelVersionAI="0" ModelCreated="2014-08-29 20:41:20" MaintainModelUpdated="1" ModelCopyright="\00A9" ModelUpdated="2014-09-12 20:26:41" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" WorkspaceColor="16777215" SnapGrid="1" DisplaySnap="1" SnapSize="10" ShowPages="1" ShowTableColumns="1" ShowTableIndeces="1" ShowColumnTypes="1" ShowDomains="0" ShowIndexInd="0" ShowNullInd="0" ShowForeignKeys="1" EntityFillColor="16777215" EntityLineColor="8388608" EntityFontColor="0" ShowTableColumnComment="0" ShowTableTriggers="1" ShowTableComment="0" ShowMaxEnumItems="3" ShowRefName="1" ShowCardinality="0" ShowJoin="0" Notation="0" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" DefaultDelete="3" DefaultUpdate="3" DefaultTableType="0" DefaultDataType="3" CreateFKRef="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="`" EncloseNames="1" HPageCount="5" VPageCount="5" SPFillColor="13499135" SPLineColor="8388608" SPFontColor="0" ViewFillColor="3329434" ViewLineColor="8388608" ViewFontColor="0" TrimSPBody="0" MinimapBackColor="16777215" MinimapShapesStyle="2" MinimapVisibleAreaStyle="2" />
+<MODELSETTINGS MDDVERSION="2.1.2 (build 998)" ModelProject="" ModelName="modelo" ModelCompany="" ModelAuthor="" ModelVersion="" ModelVersionAI="0" ModelCreated="2014-08-29 20:41:20" MaintainModelUpdated="1" ModelCopyright="\00A9" ModelUpdated="2014-11-07 20:12:14" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" WorkspaceColor="16777215" SnapGrid="1" DisplaySnap="1" SnapSize="10" ShowPages="1" ShowTableColumns="1" ShowTableIndeces="1" ShowColumnTypes="1" ShowDomains="0" ShowIndexInd="0" ShowNullInd="0" ShowForeignKeys="1" EntityFillColor="16777215" EntityLineColor="8388608" EntityFontColor="0" ShowTableColumnComment="0" ShowTableTriggers="1" ShowTableComment="0" ShowMaxEnumItems="3" ShowRefName="1" ShowCardinality="0" ShowJoin="0" Notation="0" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" DefaultDelete="3" DefaultUpdate="3" DefaultTableType="0" DefaultDataType="3" CreateFKRef="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="`" EncloseNames="1" HPageCount="5" VPageCount="5" SPFillColor="13499135" SPLineColor="8388608" SPFontColor="0" ViewFillColor="3329434" ViewLineColor="8388608" ViewFontColor="0" TrimSPBody="0" MinimapBackColor="16777215" MinimapShapesStyle="2" MinimapVisibleAreaStyle="2" />
 <GENERATIONSETTINGS TextCharCase="2" NameInComment="0" ModelCheck="1" ISQL="0" Delimiter="||" TypeInsteadOfEngine="0">
   <DBGENSETTINGS DBCreate="0" BeginScript="0" Comment="0" Drop="0" EndScript="0" />
   <FKGENSETTINGS CreateFK="1" GenerateInsideTables="1" />
@@ -62,19 +62,21 @@
 </COLUMN>
 <COLUMN ID="1036" Name="id_usuario" DomainID="-1" Pos="2" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1022" Name="nome" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="4728" Name="categoria" DomainID="-1" Pos="3" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1023" Name="ingredientes" DomainID="-1" Pos="4" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1022" Name="nome" DomainID="-1" Pos="4" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1024" Name="modo_preparo" DomainID="-1" Pos="5" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1023" Name="ingredientes" DomainID="-1" Pos="5" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1025" Name="categoria" DomainID="-1" Pos="6" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1024" Name="modo_preparo" DomainID="-1" Pos="6" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1026" Name="foto" DomainID="-1" Pos="7" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1025" Name="categoria" DomainID="-1" Pos="7" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1027" Name="observacao" DomainID="-1" Pos="8" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1026" Name="foto" DomainID="-1" Pos="8" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
-<COLUMN ID="1028" Name="ativo" DomainID="-1" Pos="9" Datatype="0" Type="TINYINT" Width="4" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="1" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+<COLUMN ID="1027" Name="observacao" DomainID="-1" Pos="9" Datatype="20" Type="TEXT" Width="0" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1028" Name="ativo" DomainID="-1" Pos="10" Datatype="0" Type="TINYINT" Width="4" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="1" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
 </COLUMN>
 </COLUMNS>
 <REFERENCES_BEGIN>
@@ -84,6 +86,7 @@
 </REFERENCES_BEGIN>
 <REFERENCES_END>
 <REFERENCE_END ID="1034" />
+<REFERENCE_END ID="4726" />
 </REFERENCES_END>
 <INDEXES>
 <INDEX ID="1030" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
@@ -198,6 +201,26 @@
 </INDEX>
 </INDEXES>
 </ENTITY>
+<ENTITY ID="4705" Name="categoria" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="840" YPos="290" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="4706" Name="id_categoria" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="1" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="4709" Name="nome" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="255" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="4710" Name="ativo" DomainID="-1" Pos="3" Datatype="0" Type="TINYINT" Width="4" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="1" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="4726" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="4714" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="4706=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
 </ENTITIES>
 <REFERENCES>
 <REFERENCE  ID="1034" Name="Ref_01" Comments="" SOURCE="1000" DESTINATION="1020" FKIDS="1002=1036\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="1036\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
@@ -221,6 +244,8 @@
 <REFERENCE  ID="4323" Name="Ref_10" Comments="" SOURCE="1000" DESTINATION="4300" FKIDS="1002=4325\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="4325\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
 </REFERENCE>
 <REFERENCE  ID="4334" Name="Ref_11" Comments="" SOURCE="1000" DESTINATION="4300" FKIDS="1002=4336\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1004" AutoColumnIDs="4336\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="4726" Name="Ref_12" Comments="" SOURCE="4705" DESTINATION="1020" FKIDS="4706=4728\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="4714" AutoColumnIDs="4728\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
 </REFERENCE>
 </REFERENCES>
 <NOTES>

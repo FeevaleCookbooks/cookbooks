@@ -9,6 +9,7 @@ class perfil extends CI_Controller {
 		
 		$data['dados_perfil']  = $this->perfil_model->getForId();
 		$data['qtde_receitas'] = count($this->receita_model->getAllRecipes());
+		$data['receitas'] = $this->receita_model->getAllRecipesArray();
 		
 		$this->load->view("author/index", $data);
 	}
